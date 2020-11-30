@@ -3,6 +3,6 @@
     "live-server": "^1.2.1"
   },
   "scripts": {
-      "serve": "live-server www"
+      "start": "live-server docs"
   }
 }

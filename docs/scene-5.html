@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    </head>
+    <body>
+        <a-scene> 
+            <a-assets>
+                <img id="sand-texture" src="assets/texture_3.png">
+                <img id="sand-normal" src="assets/normal_3.png">
+                <img id="brick-texture" src="assets/texture_2.jpg">
+                <img id="brick-normal" src="assets/normal_2.jpg">
+                <img id="sky" src="assets/sky.jpg">
+            </a-assets>
+            <a-camera>
+                <a-cursor></a-cursor>
+            </a-camera>
+
+            <a-sky src="#sky" repeat="5 5"></a-sky>
+            
+            <a-plane
+                src="#sand-texture"
+                repeat="60 60"
+                normal-map="#sand-normal"
+                normal-repeat="60 60"
+                rotation="-90 0 0"
+                scale="100 100 1">
+            </a-plane>
+
+            <a-box
+                src="#brick-texture"
+                repeat="2 2"
+                normal-map="#brick-normal"
+                normal-repeat="2 2"
+                width="2"
+                height="2"
+                depth="2"
+                position="5 1 -5">
+            </a-box>
+
+        </a-scene>
+  </body>
+</html>

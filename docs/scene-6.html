@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    </head>
+    <body>
+        <a-scene>
+            <a-camera>
+                <a-cursor></a-cursor>
+            </a-camera>            
+
+            <a-box 
+                color="red"
+                position="-2 1 -5"
+                animation="
+                    property: rotation;
+                    from: 0 0 0;
+                    to: 360 0 0;
+                    easing: linear;
+                    dur: 5000;
+                    loop: true;
+                ">                
+            </a-box>
+
+            <a-box 
+                color="blue",
+                position="2 1 -5"
+                animation="
+                    property: rotation;
+                    from: 0 0 0;
+                    to: 0 360 0;
+                    easing: linear;
+                    dur: 5000;
+                    loop: true;
+                "
+                animation__2="
+                    property: scale;
+                    dir: alternate;                    
+                    from: 1 1 1;
+                    to: 2 2 2;
+                    easing: linear;
+                    dur: 2500;
+                    loop: true;
+                ">                
+            </a-box>
+      
+        </a-scene>
+    </body>
+</html>

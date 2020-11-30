@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    </head>
+    <body>
+        <a-scene>
+            <a-assets>
+                <a-asset-item id="tree" src="assets/tree.glb"></a-asset-item>
+            </a-assets>
+
+            <a-camera>
+                <a-cursor></a-cursor>
+            </a-camera>            
+
+            <a-gltf-model
+                shadow="cast: true"
+                position="0 3 -5" 
+                src="#tree"></a-gltf-model>
+
+            <a-plane      
+                shadow="receive: true"          
+                color="#ffcc99"
+                rotation="-90 0 0"
+                height="25"
+                width="25"></a-plane>                  
+        </a-scene>
+    </body>
+</html>

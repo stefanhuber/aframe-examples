@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+        <script src="components/change-color.component.js"></script>
+    </head>
+    <body>
+        <a-scene> 
+            <a-camera>
+                <a-cursor></a-cursor>
+            </a-camera>
+            
+            <a-box
+                change-color
+                width="1"
+                height="1"
+                depth="1"
+                color="red"
+                position="0 1 -5">
+            </a-box>
+        </a-scene>
+  </body>
+</html>

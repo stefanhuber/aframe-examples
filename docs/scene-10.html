@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
+        <script src="components/goto.component.js"></script>
+    </head>
+    <body>
+        <a-scene>
+            <a-sphere
+                visible="false"
+                opacity="0"
+                id="sphere"
+                color="black"
+                shader="flat"
+                side="back"
+                radius="0.1"
+            ></a-sphere>
+
+            <a-camera id="camera">
+                <a-cursor></a-cursor>
+            </a-camera>  
+
+            <a-cylinder
+                goto
+                position="0 0 0"
+                color="grey"
+                height="0.2"
+                radius="0.5"></a-cylinder>
+
+            <a-cylinder
+                goto
+                position="11 0 -11"
+                color="grey"
+                height="0.2"
+                radius="0.5"></a-cylinder>
+
+            <a-cylinder
+                goto
+                position="-11 0 11"
+                color="grey"
+                height="0.2"
+                radius="0.5"></a-cylinder>
+
+            <a-cylinder
+                goto
+                position="11 0 11"
+                color="grey"
+                height="0.2"
+                radius="0.5"></a-cylinder>
+
+            <a-cylinder
+                goto
+                position="-11 0 -11"
+                color="grey"
+                height="0.2"
+                radius="0.5"></a-cylinder>
+            
+            <a-sky color="#ADD8E6"></a-sky>
+
+            <a-plane      
+                color="#ffcc99"
+                rotation="-90 0 0"
+                height="25"
+                width="25"></a-plane>                  
+        </a-scene>
+    </body>
+</html>

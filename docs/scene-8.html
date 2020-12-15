@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
+    </head>
+    <body>
+        <a-scene>
+
+            <a-assets>
+                <audio id="footsteps" src="assets/footsteps.mp3"></audio>
+                <audio id="water" src="assets/water.mp3"></audio>
+            </a-assets>
+                       
+            <a-box
+                color="red"
+                position="12 0.5 -12"
+                sound="
+                    src: #footsteps;
+                    loop: true;
+                    autoplay: true;
+                    distanceModel: exponential;
+                    rolloffFactor: 1.5;
+                "></a-box>
+
+            <a-box
+                color="blue"
+                position="-12 0.5 12"
+                sound="
+                    src: #water;
+                    loop: true;
+                    autoplay: true;
+                    distanceModel: exponential;
+                    rolloffFactor: 1.5;
+                "></a-box>
+
+            <a-sky color="#ADD8E6"></a-sky>
+
+            <a-plane      
+                color="#ffcc99"
+                rotation="-90 0 0"
+                height="25"
+                width="25"></a-plane>                  
+        </a-scene>
+    </body>
+</html>
